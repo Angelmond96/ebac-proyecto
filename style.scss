@@ -1,0 +1,97 @@
+$fontFamily: "Ital", Arial, Helvetica, sans-serif;
+$white: rgb(255, 255, 255);
+
+@mixin flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin shadowContainer($color, $padding, $blur) {
+    box-shadow: -19px -1px $blur -15px $color;
+    padding: $padding;
+    background-color: $color;
+}
+
+%button {
+    display: block;
+    border: none;
+    background-color: rgb(128, 128, 128);
+    color: $white;
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 700;
+    font-family: $fontFamily;
+}
+
+body {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 750;
+    color: rgb(25, 25, 112);
+    font-family: $fontFamily;
+    margin: 0;
+}
+
+header {
+    .header {
+        width: 100%;
+        padding: 15px 40px;
+        box-sizing: border-box;
+        @include flexbox;
+    }
+
+    .header__nav {
+        gap: 20px;
+        align-items: center;
+        @include flexbox;
+    }
+
+    .header__user {
+    gap: 10px;
+    align-items: center;
+    @include flexbox;   
+    }
+}
+
+main {
+    .banner {
+        width: 100%;
+        padding: 40px 0;
+        text-align: center;
+        background-image: url("../img/banner.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $white;
+        background-position-y: 60%;
+    }
+
+    .products__btn {
+        display: block;
+        border: none;
+        background-color: rgb(128, 128, 128);
+        color: $white;
+        border-radius: 20px;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        font-weight: 700;
+        font-family: $fontFamily;
+    }
+
+    .products__btn {
+        @extend %button
+    }
+
+    .cart {
+        width: 500px;
+        box-sizing: border-box;
+        height: 100%;
+        position: fixed;
+        right: -100%;
+        top: 100px;
+        @include shadowContainer(rgb(12, 216, 77), 25px, 22px)
+    }
+}
+
