@@ -198,7 +198,7 @@ img {
     box-sizing: border-box;
     height: 100%;
     position: fixed;
-    right: -400ps;
+    right: -400px;
     top: 0px;
     box-shadow: -4px 0px 15px rgba(0, 0, 0, 0.15);
     transition: right 0.3s ease;
