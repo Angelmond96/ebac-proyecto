@@ -3,15 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <!-- CONEXION CON GOOGLE FONTS - Fuentes tipograficas del proyecto -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <!-- HOJA DE ESTILOS PRINCIPAL - Ubicada en la carpeta css -->
     <link rel="stylesheet" href="css/style.css">
-    <title>Blue & Green Coffee House</title>
+    <!--
+    VINCULACION CON EL ARCHIVO DE JAVASCRIPT
+    Uso de defer le indica: Descarga el archivo JavaScript en segundo plano mientras sigues dibujando el HTML,
+    pero no lo ejecutes hasta que todo el HTML esté completamente terminado
+    -->
+    <script src="main.js" defer></script>
+    <title>Jazz Cafe</title>
 </head>
 <body>
+
+    <!--
+    MENU LATERAL IZQUIERDO
+    Nace oculto a la izquierda y se despliega con JavaScript
+    -->
+    <div id="menu-izquierdo" class="menu-lateral">
+        <div class="menu-header">
+            <h2>Menú Principal</h2>
+            <button id="btn-cerrar-menu" class="btn-cerrar">X</button>
+        </div>
+        <nav class="menu-enlaces">
+            <a href="#">Inicio</a>
+            <a href="#">Categorías</a>
+            <a href="#">Ofertas</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </div>
+
+    <!--
+    CABECERA DE LA PAGINA (HEADER)
+    Contiene los accesos principales, logo y carrito de compras
+    -->
     <header class="header">  
-        <img class="header__logo" src="img/jazz cafe logo.avif" alt="Logo Blue & Green Coffe House"> 
+        <button id="btn-abrir-menu" class="header__btn-menu">☰</button>
+
+        <img class="header__logo" src="img/jazz cafe logo.avif" alt="Logo Jazz Cafe"> 
+        
         <section class="header__menu">
             <nav class="header__nav">
                 <a class="header__link">Home</a>
@@ -19,87 +54,124 @@
                 <a class="header__link">Galeria</a>
                 <a class="header__link">Contacto</a>
             </nav>
+            
             <section class="header__user">
                 <img src="img/user.png" class="header__icon">
-                <img src="img/carrito.jpg" class="header__icon header__icon--secondary">
+                <div class="header__cart-container">
+                    <img src="img/carrito.jpg" class="header__icon header__icon--secondary" id="icono-carrito-header">
+                    <span id="cart-badge" class="header__cart-badge">0</span>
+                </div>
             </section>
         </section>
     </header>
 
     <main>
+        <!--
+        SECCION BANNER PRINCIPAL
+        Seccion introductoria con imagen de fondo estetica
+        -->
         <section class="banner">
             <h2 class="banner__title">Productos Nuevos</h2>
             <p class="banner__subtitle">Conoce nuestros productos nuevos</p>
         </section>
 
+        <!--
+        CATALOGO DE PRODUCTOS (GRID DE TARJETAS)
+        Cada producto incluye su imagen, titulo, precio y boton interactivo
+        -->
         <article class="products">
             <section class="products__item">
-                <img src="img/cafe colombia.webp" class="products__img">
+                <div class="products__img-container"> 
+                    <img src="img/cafe colombia.webp" class="products__img">
+                </div>
                 <p class="products__title">Café Chiapas</p>
-                <button class="products__btn">Comprar</button>
+                <p class="products__price">$350.00</p>
+                <button class="products__btn">Agregar al carrito</button>
             </section>
+            
             <section class="products__item">
-                <img src="img/cafe colombia.webp" class="products__img">
+                <div class="products__img-container"> 
+                    <img src="img/cafe colombia.webp" class="products__img">
+                </div>
                 <p class="products__title">Café Colombia</p>
-                <button class="products__btn">Comprar</button>
+                <p class="products__price">$350.00</p>
+                <button class="products__btn">Agregar al carrito</button>
             </section>
+            
             <section class="products__item">
-                <img src="img/cafe colombia.webp" class="products__img">
+                <div class="products__img-container"> 
+                    <img src="img/cafe colombia.webp" class="products__img">
+                </div>
                 <p class="products__title">Café Blend</p>
-                <button class="products__btn products__btn--disabled">Comprar</button>
+                <p class="products__price">$320.00</p>
+                <button class="products__btn">Agregar al carrito</button>
             </section>
+            
             <section class="products__item">
-                <img src="img/cafe colombia.webp" class="products__img">
+                <div class="products__img-container"> 
+                    <img src="img/cafe colombia.webp" class="products__img">
+                </div>
                 <p class="products__title">Café Laguna</p>
-                <button class="products__btn">Comprar</button>
+                <p class="products__price">$360.00</p>
+                <button class="products__btn">Agregar al carrito</button>
             </section>
+            
             <section class="products__item">
-                <img src="img/cafe colombia.webp" class="products__img">
+                <div class="products__img-container"> 
+                    <img src="img/cafe colombia.webp" class="products__img">
+                </div>
                 <p class="products__title">Café 3 Soles</p>
-                <button class="products__btn">Comprar</button>
+                <p class="products__price">$340.00</p>
+                <button class="products__btn">Agregar al carrito</button>
             </section>
+            
             <section class="products__item">
-                <img src="img/cafe colombia.webp" class="products__img">
+                <div class="products__img-container"> 
+                    <img src="img/cafe colombia.webp" class="products__img">
+                </div>
                 <p class="products__title">Café Geisha</p>
-                <button class="products__btn">Comprar</button>
+                <p class="products__price">$420.00</p>
+                <button class="products__btn">Agregar al carrito</button>
             </section>
+            
             <section class="products__item">
-                <img src="img/cafe colombia.webp" class="products__img">
+                <div class="products__img-container"> 
+                    <img src="img/cafe colombia.webp" class="products__img">
+                </div>
                 <p class="products__title">Café Espresso</p>
-                <button class="products__btn products__btn--disable">Comprar</button>
+                <p class="products__price">$300.00</p>
+                <button class="products__btn products__btn--disable">Agregar al carrito</button>
             </section>
+            
             <section class="products__item">
-                <img src="img/cafe colombia.webp" class="products__img">
+                <div class="products__img-container"> 
+                    <img src="img/cafe colombia.webp" class="products__img">
+                </div>
                 <p class="products__title">Café Bebidas con leche</p>
-                <button class="products__btn">Comprar</button>
+                <p class="products__price">$280.00</p>
+                <button class="products__btn">Agregar al carrito</button>
             </section>
+            
             <section class="products__item">
-                <img src="img/cafe colombia.webp" class="products__img">
+                <div class="products__img-container"> 
+                    <img src="img/cafe colombia.webp" class="products__img">
+                </div>
                 <p class="products__title">Café de la casa</p>
-                <button class="products__btn">Comprar</button>
+                <p class="products__price">$310.00</p>
+                <button class="products__btn">Agregar al carrito</button>
             </section>
         </article>
         
+        <!--
+        SECCION DEL CARRITO DE COMPRAS
+        Aqui se inyectan dinamicamente las compras con JavaScript
+        -->
         <section class="cart">
-            <h2 class="cart__title">CARRITO</h2>
-            <div class="cart__div">
-                <img src="img/cafe colombia.webp" class="cart__img">
-                <p class="cart__price">$350.00</p>
-                <p class="cart__products">Café Chiapas</p>
-                <img src="img/carrito.jpg" alt="Icono Quitar" class="delete__icon"/>
+            <div class="cart__header">
+                <h2 class="cart__title">CARRITO</h2>
+                <button id="btn-cerrar-carrito" class="btn-cerrar">X</button>
             </div>
-            <div class="cart__div">
-                <img src="img/cafe colombia.webp" class="cart__img">
-                <p class="cart__price">$350.00</p>
-                <p class="cart__products">Café Chiapas</p>
-                <img src="img/carrito.jpg" alt="Icono Quitar" class="delete__icon"/>
-            </div>
-            <div class="cart__div">
-                <img src="img/cafe colombia.webp" class="cart__img">
-                <p class="cart__price">$350.00</p>
-                <p class="cart__products">Café Chiapas</p>
-                <img src="img/carrito.jpg" alt="Icono Quitar" class="delete__icon"/>
-            </div>
+            <div id="cart-items-container"></div>
         </section>
     </main>
 </body>
