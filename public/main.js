@@ -79,7 +79,7 @@ function actualizarVistaCarrito() {
             <img src="${producto.imagen}" class="cart__img">
             <p class="cart__price">${producto.precio}</p>
             <p class="cart__products">${producto.titulo}</p>
-            <button class="delete__icon" data-id="${producto.id}" 
+            <button class="delete__icon" aria-label="Eliminar producto" data-id="${producto.id}" 
             style="background: none; border: none; color: #ff4a4a; font-size: 10px; font-weight: bold; cursor: pointer;">✕</button>
         `;
 

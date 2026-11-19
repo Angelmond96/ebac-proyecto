@@ -28,7 +28,7 @@
     <div id="menu-izquierdo" class="menu-lateral">
         <div class="menu-header">
             <h2>Menú Principal</h2>
-            <button id="btn-cerrar-menu" class="btn-cerrar">X</button>
+            <button id="btn-cerrar-menu" class="btn-cerrar" aria-label="Cerrar menú lateral">X</button>
         </div>
         <nav class="menu-enlaces">
             <a href="#">Inicio</a>
@@ -43,7 +43,7 @@
     Contiene los accesos principales, logo y carrito de compras
     -->
     <header class="header">  
-        <button id="btn-abrir-menu" class="header__btn-menu">☰</button>
+        <button id="btn-abrir-menu" class="header__btn-menu" aria-label="Abrir menú de navegación">☰</button>
 
         <img class="header__logo" src="img/jazz cafe logo.avif" alt="Logo Jazz Cafe"> 
         
@@ -82,7 +82,7 @@
         <article class="products">
             <section class="products__item">
                 <div class="products__img-container"> 
-                    <img src="img/cafe colombia.webp" class="products__img">
+                    <img src="img/cafe colombia.webp" alt="Bolsa de Café Chiapas de especialidad" class="products__img">
                 </div>
                 <p class="products__title">Café Chiapas</p>
                 <p class="products__price">$350.00</p>
@@ -91,7 +91,7 @@
             
             <section class="products__item">
                 <div class="products__img-container"> 
-                    <img src="img/cafe colombia.webp" class="products__img">
+                    <img src="img/cafe colombia.webp" alt="Bolsa de Café Colombia de especialidad" class="products__img">
                 </div>
                 <p class="products__title">Café Colombia</p>
                 <p class="products__price">$350.00</p>
@@ -100,7 +100,7 @@
             
             <section class="products__item">
                 <div class="products__img-container"> 
-                    <img src="img/cafe colombia.webp" class="products__img">
+                    <img src="img/cafe colombia.webp" alt="Bolsa de Café Blend de especialidad" class="products__img">
                 </div>
                 <p class="products__title">Café Blend</p>
                 <p class="products__price">$320.00</p>
@@ -109,7 +109,7 @@
             
             <section class="products__item">
                 <div class="products__img-container"> 
-                    <img src="img/cafe colombia.webp" class="products__img">
+                    <img src="img/cafe colombia.webp" alt="Bolsa de Café Laguna de especialidad" class="products__img">
                 </div>
                 <p class="products__title">Café Laguna</p>
                 <p class="products__price">$360.00</p>
@@ -118,7 +118,7 @@
             
             <section class="products__item">
                 <div class="products__img-container"> 
-                    <img src="img/cafe colombia.webp" class="products__img">
+                    <img src="img/cafe colombia.webp" alt="Bolsa de Café 3 Soles de especialidad" class="products__img">
                 </div>
                 <p class="products__title">Café 3 Soles</p>
                 <p class="products__price">$340.00</p>
@@ -127,7 +127,7 @@
             
             <section class="products__item">
                 <div class="products__img-container"> 
-                    <img src="img/cafe colombia.webp" class="products__img">
+                    <img src="img/cafe colombia.webp" alt="Bolsa de Café Geisha de especialidad" class="products__img">
                 </div>
                 <p class="products__title">Café Geisha</p>
                 <p class="products__price">$420.00</p>
@@ -136,16 +136,16 @@
             
             <section class="products__item">
                 <div class="products__img-container"> 
-                    <img src="img/cafe colombia.webp" class="products__img">
+                    <img src="img/cafe colombia.webp" alt="Bolsa de Café Espresso de especialidad" class="products__img">
                 </div>
                 <p class="products__title">Café Espresso</p>
                 <p class="products__price">$300.00</p>
-                <button class="products__btn products__btn--disable">Agregar al carrito</button>
+                <button class="products__btn products__btn--disable" disabled>Agotado</button>
             </section>
             
             <section class="products__item">
                 <div class="products__img-container"> 
-                    <img src="img/cafe colombia.webp" class="products__img">
+                    <img src="img/cafe colombia.webp" alt="Bolsa de Café Bebidas con leche de especialidad" class="products__img">
                 </div>
                 <p class="products__title">Café Bebidas con leche</p>
                 <p class="products__price">$280.00</p>
@@ -154,7 +154,7 @@
             
             <section class="products__item">
                 <div class="products__img-container"> 
-                    <img src="img/cafe colombia.webp" class="products__img">
+                    <img src="img/cafe colombia.webp" alt="Bolsa de Café de la casa de especialidad" class="products__img">
                 </div>
                 <p class="products__title">Café de la casa</p>
                 <p class="products__price">$310.00</p>
@@ -169,7 +169,7 @@
         <section class="cart">
             <div class="cart__header">
                 <h2 class="cart__title">CARRITO</h2>
-                <button id="btn-cerrar-carrito" class="btn-cerrar">X</button>
+                <button id="btn-cerrar-carrito" class="btn-cerrar" aria-label="Cerrar carrito de compras">X</button>
             </div>
             <div id="cart-items-container"></div>
         </section>

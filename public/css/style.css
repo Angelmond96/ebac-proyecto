@@ -341,16 +341,21 @@ img {
 7. DISEÑO RESPONSIVO (MEDIAS QUERIES)
 */
 @media (max-width: 820px) {
-    header {
-        padding: 15px;
-    }
-    
-    header > img {
-        width: 60px;
+    .header {
+        padding: 20px;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
-    header i {
-        width: 30px;
+    .header__menu,
+    .header__nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .banner__subtitle {
+        width: 90%;
+        max-width: 500px;
     }
 
     .products {
@@ -401,7 +406,7 @@ img {
     }
 
     .cart h2 {
-        padding:  15px 0;
+        padding: 15px 0;
     }
 
     .cart div {
