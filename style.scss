@@ -75,6 +75,7 @@ img {
 .banner {
     width: 100%;
     padding: 80px 0;
+    box-sizing: border-box;
     text-align: center;
     background-image: url("../img/banner.jpg");
     background-repeat: no-repeat;
@@ -87,7 +88,7 @@ img {
     width: 100%;
     font-weight: 600;
     font-size: 30px;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .banner__subtitle {
