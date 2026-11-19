@@ -3,6 +3,7 @@
 */
 body {
     width: 100%;
+    overflow-x: hidden;
     font-size: 15px;
     font-weight: 750;
     color: rgb(25, 25, 112);
@@ -373,6 +374,18 @@ img {
 }
 
 @media (max-width: 480px) {
+    .header {
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .header__menu,
+    .header__nav {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+    }
+
     .banner {
         padding: 30px 0;
     }
