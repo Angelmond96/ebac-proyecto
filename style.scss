@@ -384,10 +384,16 @@ img {
         padding: 15px;
     }
 
-    .header__menu,
-    .header__nav {
+    .header__menu {
         width: 100%;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header__nav {
+        width: auto;
+        justify-content: flex-start;
         gap: 12px;
     }
 
