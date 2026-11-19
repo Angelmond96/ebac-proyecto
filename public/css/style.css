@@ -3,6 +3,7 @@
 */
 body {
     width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     font-size: 15px;
     font-weight: 750;
@@ -204,11 +205,13 @@ img {
     top: 0px;
     box-shadow: -4px 0px 15px rgba(0, 0, 0, 0.15);
     transition: right 0.3s ease;
+    visibility: hidden;
     z-index: 2000;
 }
 
 .cart.active {
     right: 0;
+    visibility: visible;
 }
 
 .cart__header {
@@ -265,11 +268,13 @@ img {
   transition: left 0.3s ease;
   z-index: 2000;
   padding: 20px;
+  visibility: hidden;
   box-sizing: border-box;
 }
 
 .menu-lateral.active {
   left: 0;
+  visibility: visible;
 }
 
 .menu-header {
